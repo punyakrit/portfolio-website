@@ -15,7 +15,7 @@ function ProfleCard() {
       >
         <div className="">
           <Image alt="image" src={image} className="rounded-3xl " />
-          <div className="text-black mt-4 font-bold text-3xl">
+          <div className="text-black text-center mt-4 font-bold text-3xl">
             Punyakrit Singh Makhni
           </div>
         </div>
@@ -29,10 +29,16 @@ function ProfleCard() {
               <Link href="https://github.com/punyakrit" target="_blank">
                 <Github />
               </Link>
-              <Link href="https://www.linkedin.com/in/punyakrit-singh-makhni/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/punyakrit-singh-makhni/"
+                target="_blank"
+              >
                 <Linkedin />
               </Link>
-              <Link href="mailto:punyakritsinghmakhni@gmail.com" target="_blank">
+              <Link
+                href="mailto:punyakritsinghmakhni@gmail.com"
+                target="_blank"
+              >
                 <Mail />
               </Link>
               <Link href="https://x.com/Punyakrit22" target="_blank">
