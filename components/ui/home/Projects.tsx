@@ -73,7 +73,11 @@ function Projects() {
 
 function Card({ project }: CardProps) {
   return (
-    <div className="hover:bg-white/5 w-[800px] p-6 rounded-2xl">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.5 }}
+      className="hover:bg-white/5 w-[800px] p-6 rounded-2xl"
+    >
       <div className="flex justify-between">
         <div className="flex">
           <Image
@@ -87,15 +91,27 @@ function Card({ project }: CardProps) {
           </div>
         </div>
         <div className="flex flex-col justify-center space-y-8">
-          <Link href={project.githubUrl} target="_blank">
-            <Github />
-          </Link>
-          <Link href={project.url} target="_blank">
-            <Link2 />
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Link href={project.githubUrl} target="_blank">
+              <Github />
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Link href={project.url} target="_blank">
+              <Link2 />
+            </Link>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
