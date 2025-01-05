@@ -35,9 +35,9 @@ function WorkExperience() {
         <span className="text-[#343334]">Experience</span>
       </div>
       <div className="my-10">
-        {jobData.map((jobData) => {
+        {jobData.map((jobData, i) => {
           return (
-            <div className="my-4 mt-">
+            <div className="my-4 mt-" key={i}>
               <JobCard data={jobData} />
             </div>
           );
