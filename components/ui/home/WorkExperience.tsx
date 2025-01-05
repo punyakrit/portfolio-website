@@ -29,15 +29,16 @@ function WorkExperience() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1.8, ease: "easeInOut" } }}
+      className="pb-5"
     >
-      <div className="text-8xl font-extrabold text-wrap leading-none w-3/4">
+      <div className="text-8xl font-extrabold text-wrap leading-none w-3/4 ">
         <span className="">Work </span>
-        <span className="text-[#343334]">Experience</span>
+        <span className="text-[#343334]">EXPERIENCE</span>
       </div>
       <div className="my-10">
-        {jobData.map((jobData) => {
+        {jobData.map((jobData, i) => {
           return (
-            <div className="my-4 mt-">
+            <div key={i} className="my-4 mt-">
               <JobCard data={jobData} />
             </div>
           );
