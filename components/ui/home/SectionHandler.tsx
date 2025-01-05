@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import Projects from "./Projects";
 import WorkExperience from "./WorkExperience";
-import Contact from "./Contact";
 
 function SectionHandler() {
   return (
@@ -10,7 +9,6 @@ function SectionHandler() {
       <Header />
       <Projects/>
       <WorkExperience/>
-      <Contact/>
       
     </div>
   );
