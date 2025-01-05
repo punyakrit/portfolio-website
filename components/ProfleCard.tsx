@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 function ProfleCard() {
   return (
-    <div className="h-screen flex justify-end items-center">
+    <div className="h-screen flex justify-end items-center z-50">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}

@@ -52,9 +52,9 @@ function Projects() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1.8, ease: "easeInOut" } }}
-      className="my-32"
+      className="my-28"
     >
-      <div className="text-8xl font-extrabold text-wrap leading-none">
+      <div className="text-8xl font-extrabold text-wrap leading-none w-3/4">
         <span className="">RECENT </span>
         <span className="text-[#343334]">PROJECTS</span>
       </div>
