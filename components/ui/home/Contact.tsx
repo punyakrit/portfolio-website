@@ -1,12 +1,26 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Label } from "../label";
 import { Input } from "../input";
 import { Textarea } from "../textarea";
 import { Button } from "../button";
+import axios from "axios";
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+
+  function sendMail(){
+    const response = axios.post("/api/sendmail",{
+      name,
+      email,
+      message
+    })
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,6 +38,7 @@ function Contact() {
             <Input
               className="rounded-xl bg-[#343334] text-white border-none mt-1 placeholder:text-white/60"
               placeholder="Your Name"
+              onChange={(e)=>setName(e.target.value)}
             ></Input>
           </div>
           <div className="w-1/2">
@@ -31,6 +46,7 @@ function Contact() {
             <Input
               className="rounded-xl bg-[#343334] text-white border-none mt-1 placeholder:text-white/60"
               placeholder="Email@gmail.com"
+              onChange={(e)=>setEmail(e.target.value)}
             ></Input>
           </div>
         </div>
@@ -39,10 +55,11 @@ function Contact() {
           <Textarea
             className="rounded-xl bg-[#343334] text-white border-none mt-1 placeholder:text-white/60"
             placeholder="Your message here...."
+            onChange={(e)=>setMessage(e.target.value)}
           ></Textarea>
         </div>
         <div className="py-5">
-          <Button className="bg-orange-600 w-full rounded-xl font-semibold transition duration-500 hover:bg-white hover:text-black ">
+          <Button onClick={sendMail} className="bg-orange-600 w-full rounded-xl font-semibold transition duration-500 hover:bg-white hover:text-black ">
             Submit
           </Button>
         </div>
